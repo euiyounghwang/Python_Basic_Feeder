@@ -1,0 +1,50 @@
+{
+  "dev": {
+    "interface": {
+      "sample_db": [
+        {
+          "class_name": "oracle.jdbc.driver.OracleDriver",
+          "jar_path" : "/ES/ES_Basic_Feeder/Lib/ojdbc6.jar",
+          "tns": "jdbc:oracle:thin:@x.x.x.x:x",
+          "user_id": "x",
+          "passwd": "x",
+          "query" : "SELECT * FROM TB WHERE ROWNUM< 12"
+        }
+      ],
+      "master_sg_db": [
+        {
+          "class_name": "oracle.jdbc.driver.OracleDriver",
+          "jar_path" : "/ES/ES_Basic_Feeder/Lib/ojdbc6.jar",
+          "tns": "jdbc:oracle:thin:@x.x.x.x:x:x",
+          "user_id": "x",
+          "passwd": "x",
+          "query" : "SELECT * FROM TB WHERE ROWNUM< 12"
+        }
+      ]
+    }
+  },
+  "prd": {
+    "interface": {
+      "sample_db": [
+        {
+          "class_name": "oracle.jdbc.driver.OracleDriver",
+          "jar_path" : "/ES/ES_Python_PROQ/Lib/Module/ojdbc6.jar",
+          "tns": "jdbc:oracle:thin:@10.132.12.51:1557:DEMINI",
+          "user_id": "POSMINI",
+          "passwd": "demini1",
+          "query" : "SELECT COMPANY_CODE || '_' || EMPLOYEE_NUMBER FROM POSMINI.USER_PREFERENCE_LIST WHERE ROWNUM< 12"
+        }
+      ],
+      "master_sg_db": [
+        {
+          "class_name": "oracle.jdbc.driver.OracleDriver",
+          "jar_path" : "/ES/ES_Python_PROQ/Lib/Module/ojdbc6.jar",
+          "tns": "jdbc:oracle:thin:@10.132.12.49:1894:PEMINI",
+          "user_id": "POSRWMINI",
+          "passwd": "minirwpwd",
+          "query" : "SELECT * FROM POSMINI.USER_PREFERENCE_LIST WHERE ROWNUM< 12"
+        }
+      ]
+    }
+  }
+}
