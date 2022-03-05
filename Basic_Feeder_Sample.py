@@ -8,7 +8,6 @@ from elasticsearch import helpers
 import sys
 
 # sys.path.append("D:\\Python\\")
-from torch.distributions import Gamma
 
 sys.path.append("/ES/")
 

@@ -8,7 +8,8 @@ from elasticsearch import helpers
 import sys
 
 # sys.path.append("D:\\Python\\")
-sys.path.append("/ES/")
+sys.path.append("/Users/euiyoung.hwang/ES/Python_Workspace/")
+# /Users/euiyoung.hwang/ES/Python_Workspace/ES_Basic_Feeder/Basic_Feeder.py
 
 import ES_Basic_Feeder.Utils.Util as Util
 
