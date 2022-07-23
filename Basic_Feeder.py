@@ -31,7 +31,7 @@ import Utils.Util as Util
 # ---
 # MY CLUSTER
 # ---
-Elastic_IP = 'x.x.x.x:9201'
+Elastic_IP = 'localhost:9200'
 
 
 # INDICS_NAME = 'Sample'
@@ -224,7 +224,7 @@ def Http_INSERT():
     http://jason-heo.github.io/elasticsearch/2016/07/16/elasticsearch-with-python.html
     :return:
     """
-    header = {'Content-Type': 'application/x-ndjson', 'Authorization': 'Basic xxxxx=='}
+    header = {'Content-Type': 'application/x-ndjson', 'Authorization': 'Basic ZWxhc3RpYzpnc2FhZG1pbg=='}
     # url = 'http://' + Elastic_IP + '/_bulk?refresh=wait_for'
     url = 'http://' + Elastic_IP + '/_bulk'
     # print('url', url)
@@ -368,7 +368,7 @@ def Elastic_INSERT_BULK(docs):
     if len(docs) < 1:
         return
 
-    es_client = elasticsearch.Elasticsearch(Elastic_IP, http_auth=('elastic', 'x'), )
+    es_client = elasticsearch.Elasticsearch(Elastic_IP, http_auth=('elastic', 'gsaadmin'), )
 
     if es_client is not None:
         http_requests_total_count +=1
